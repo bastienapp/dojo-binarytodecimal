@@ -13,4 +13,16 @@ class BinaryToDecimal {
 		}
 		return result;
 	}
+	
+	public static int binary(String numbinaire) {
+		int result = 0;
+		int longueurString = numbinaire.length();
+		for (int i = 1; i <= longueurString; i++){
+			if (numbinaire.charAt(i - 1) == '1'){
+				result = result + (int)Math.pow(2, longueurString - i);
+			} 
+		}
+
+		return result;
+	}
 }
